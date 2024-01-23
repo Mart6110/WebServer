@@ -99,9 +99,6 @@ namespace WebServer
             if (requestedPath == "/") requestedPath = "index.html";
             string filePath = Path.Join(WebServerPath, requestedPath);
 
-            Console.WriteLine(filePath);
-            Console.WriteLine(File.Exists(filePath));
-
             // Check if the requested file exists
             if (!File.Exists(filePath)) return null;
             else
